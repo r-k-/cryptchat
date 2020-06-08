@@ -1,0 +1,4 @@
+"""
+Module entry point.
+
+"""

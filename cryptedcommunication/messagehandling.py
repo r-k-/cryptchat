@@ -14,5 +14,4 @@ def msg_crypt(key: RSA, msg: str) -> bytes:
 
 def msg_decrypt(key: RSA, msg: bytes) -> str:
     decryptor = PKCS1_OAEP.new(key)
-    return decryptor.decrypt(encrypted)
-
+    return decryptor.decrypt(msg)

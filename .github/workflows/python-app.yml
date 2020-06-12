@@ -35,5 +35,5 @@ jobs:
       run: |
         pytest -m tests
     # file paths to consider in the event. Optional; defaults to all.
-      paths:
-      - 'test/*'
+    paths:
+    - 'test/*'

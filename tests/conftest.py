@@ -9,10 +9,10 @@ from Crypto.PublicKey import RSA
 
 
 @pytest.fixture(scope='module')
-def key():
+def sample_key():
     yield RSA.generate(1024)
 
 
-@pytest.fixture(scope='module')
-def temp_folder():
-    pass 
+# @pytest.fixture(scope='module')
+# def temp_folder():
+#     pass

@@ -2,13 +2,10 @@
 Test message handling functions. 
 
 """
-try:
-    from ..cryptedcommunication.messagehandling import msg_encrypt, msg_decrypt
-except:
-    from ..cryptchat.cryptedcommunication.messagehandling import msg_encrypt, msg_decrypt
+from ..cryptedcommunication.messagehandling import msg_decrypt, msg_crypt
 
 
-def test_messages(key):
+def test_messages(sample_key):
     msg = b'A message for encryption'
-    assert msg == msg_decrypt(key, msg_encrypt(key, msg))
+    assert msg == msg_decrypt(sample_key, msg_crypt(sample_key, msg))
 

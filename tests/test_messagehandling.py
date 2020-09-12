@@ -1,5 +1,5 @@
 """
-Test message handling functions. 
+Test message handling functions.
 
 """
 from ..cryptedcommunication.messagehandling import msg_decrypt, msg_crypt

@@ -9,6 +9,5 @@ setup(name='cryptedcommunication',
       description='Encrypted communication module',
       author='r-k-',
       author_email='r-k-@users.github.com',
-      url='tbd',
-      packages=[],
-     )
+      url='https://github.com/r-k-/cryptchat.git',
+      packages=[])

@@ -42,6 +42,6 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: cryptchat-module-package
-        path: cryptedcommunication-1.0*
+        path: dist/cryptedcommunication-1.0*
 
  

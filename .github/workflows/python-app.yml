@@ -38,6 +38,7 @@ jobs:
         pytest tests
     - name: Build package
       run: |
+        git log -1 --format=%h > version_id
         python setup.py sdist
     - uses: actions/upload-artifact@v2
       with:

@@ -1,5 +1,2 @@
-#
 crypto
 pycrypto
-
-pytest

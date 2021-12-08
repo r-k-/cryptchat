@@ -3,19 +3,35 @@ Base setup script for building the module.
 
 """
 from distutils.core import setup
-from os.path import exists
 
+package_name = r'cryptedcommunication'
+package_author = r'r-k-'
+package_author_mail = r'r-k-@users.github.com'
+package_url = r'https://github.com/r-k-/cryptchat.git'
+
+##############################################################################
+
+requirements_file = r'requirements.in'
+setup_requirements_file = r'setup_requirements.in'
+tests_requirements_file = r'setup_requirements.in'
+with open(requirements_file) as rf:
+    requirements = rf.readlines()
+with open(setup_requirements_file) as rf:
+    setup_requirements = rf.readlines()
+with open(tests_requirements_file) as rf:
+    tests_requirements = rf.readlines()
 
 version_id_file = r'version_id'
-version_id = None
-if exists(version_id_file):
-	with open(version_id_file) as verf:
-		version_id = verf.readline().strip()
-	
-setup(name='cryptedcommunication',
-      version='1.0',
-      description='Encrypted communication module',
-      author='r-k-',
-      author_email='r-k-@users.github.com',
-      url='https://github.com/r-k-/cryptchat.git',
-      packages=[])
+
+setup(
+    name=package_name,
+    description='Encrypted communication module',
+    author=package_author,
+    author_email=package_author_mail,
+    url=package_url,
+    packages=[],
+    install_requires=requirements,
+    setup_requires=setup_requirements,
+    tests_require=tests_requirements,
+    vcversioner={r'version_file': version_id_file}
+)

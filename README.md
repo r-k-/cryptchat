@@ -2,4 +2,4 @@
 
 A python module allowing safe communication. 
 
-Based on **Crypt** module.
+Based on pymulticrypt module.

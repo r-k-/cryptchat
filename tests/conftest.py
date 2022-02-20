@@ -3,9 +3,9 @@ Pytest fixtures
 
 """
 import pytest
-from Crypto.PublicKey import RSA
+from pymulticrypt import End2End
 
 
 @pytest.fixture(scope='module')
 def sample_key():
-    yield RSA.generate(1024)
+    yield End2End().keys()

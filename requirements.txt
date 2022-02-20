@@ -1,2 +1,1 @@
-crypto==1.4.1
-pycrypto==2.6.1
+pymulticrypt==1.2

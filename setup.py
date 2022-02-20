@@ -13,7 +13,7 @@ package_url = r'https://github.com/r-k-/cryptchat.git'
 
 requirements_file = r'requirements.in'
 setup_requirements_file = r'setup_requirements.in'
-tests_requirements_file = r'setup_requirements.in'
+tests_requirements_file = r'tests_requirements.in'
 with open(requirements_file) as rf:
     requirements = rf.readlines()
 with open(setup_requirements_file) as rf:

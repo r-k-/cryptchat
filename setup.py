@@ -2,7 +2,7 @@
 Base setup script for building the module.
 
 """
-from distutils.core import setup
+from setuptools import setup
 
 package_name = r'cryptedcommunication'
 package_author = r'r-k-'

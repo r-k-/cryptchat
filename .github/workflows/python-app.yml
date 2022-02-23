@@ -35,7 +35,7 @@ jobs:
         pytest tests
     - name: Build package
       run: |
-        python setup.py sdist bdist_wheel clean --all
+        python setup.py --no-use-pep517 sdist bdist_wheel clean --all
     - uses: actions/upload-artifact@v2
       with:
         name: cryptchat-module-package

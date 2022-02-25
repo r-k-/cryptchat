@@ -34,6 +34,7 @@ jobs:
         pytest tests
     - name: Build package
       run: |
+        python setup.py --version
         python -m build --wheel
     - uses: actions/upload-artifact@v2
       with:

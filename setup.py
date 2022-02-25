@@ -33,7 +33,7 @@ setup(
     install_requires=requirements,
     setup_requires=setup_requirements,
     tests_require=tests_requirements,
-    vcversioner={r'version_file': version_id_file},
+    vcversioner={r'version_file': version_id_file, },
     python_requires=">=3.7",
     classifiers=[
         'Programming Language :: Python :: 3.7',

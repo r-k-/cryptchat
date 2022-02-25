@@ -32,7 +32,11 @@ jobs:
         flake8 . --count --show-source --statistics
     - name: Test with pytest
       run: |
-        pytest tests
+        pytest tests --cov=cryptedcommunication --cov-branch > pytest-coverage.txt
+    - name: pytest-coverage-commentator
+        uses: coroo/pytest-coverage-commentator@v1.0.2
+        with:
+          pytest-coverage: pytest-coverage.txt
     - name: Build package
       run: |
         python setup.py --version

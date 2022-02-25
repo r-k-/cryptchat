@@ -3,6 +3,7 @@ Test message handling functions.
 
 """
 import pytest
+
 from ..cryptedcommunication.messagehandling import msg_decrypt, msg_crypt
 
 

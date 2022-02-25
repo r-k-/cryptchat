@@ -43,5 +43,5 @@ jobs:
         python -m build --wheel
     - uses: actions/upload-artifact@v2
       with:
-        name: cryptedcommunication`echo version_id`
+        name: cryptedcommunication${{ env.VERSION }}
         path: dist/cryptedcommunication-*

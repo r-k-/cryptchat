@@ -43,7 +43,5 @@ jobs:
         python -m build --wheel
     - uses: actions/upload-artifact@v2
       with:
-        name: cryptchat-module-package
+        name: cryptedcommunication`echo version_id`
         path: dist/cryptedcommunication-*
-
- 

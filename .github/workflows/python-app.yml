@@ -32,16 +32,12 @@ jobs:
         flake8 . --count --show-source --statistics
     - name: Test with pytest
       run: |
-        pytest tests --cov=cryptedcommunication --cov-branch > pytest-coverage.txt
-    - name: pytest-coverage-commentator
-      uses: coroo/pytest-coverage-commentator@v1.0.2
-      with:
-        pytest-coverage: pytest-coverage.txt
+        pytest tests --cov=cryptedcommunication --cov-branch --cov-report term
     - name: Build package
       run: |
         python setup.py --version
         python -m build --wheel
     - uses: actions/upload-artifact@v2
       with:
-        name: cryptedcommunication${{ env.VERSION }}
+        name: cryptedcommunication
         path: dist/cryptedcommunication-*

@@ -33,6 +33,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest tests --cov=cryptedcommunication --cov-branch --cov-report term
+    - name: Mutation testing
+      run: |
+        mutmut run
     - name: Build package
       run: |
         python setup.py --version
